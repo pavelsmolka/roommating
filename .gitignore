@@ -11,6 +11,10 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+log
+
+config/database.yml
+db/development.sqlite3
 
 # YARD artifacts
 .yardoc
