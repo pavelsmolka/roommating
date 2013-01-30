@@ -13,8 +13,9 @@ test/version_tmp
 tmp
 log
 
-config/database.yml
-db/development.sqlite3
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/schema.rb
 
 # YARD artifacts
 .yardoc
