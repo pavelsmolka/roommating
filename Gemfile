@@ -9,21 +9,20 @@ gem 'sqlite3'
 gem 'pg'
 gem 'mysql2'
 
-gem 'ember-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier', '>= 1.0.3'
+  gem 'anjlab-bootstrap-rails', '>= 2.1', :require => 'bootstrap-rails'
 end
 
 gem 'jquery-rails'
+# barber included because of https://github.com/emberjs/ember.js/issues/1827#issuecomment-12610866
+gem 'barber', git: 'git://github.com/tchak/barber.git'
+gem 'ember-rails', github: 'emberjs/ember-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

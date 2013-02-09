@@ -1,0 +1,21 @@
+<style>
+    td, th {
+        border: 1px solid #eeeeee;
+        padding: 15px;
+    }
+</style>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Created</th>
+  </tr>
+  </thead>
+  <tbody>
+      {{#each band in controller}}
+          {{view App.ShowBandView contentBinding="band"}}
+      {{/each}}
+  </tbody>
+</table>
