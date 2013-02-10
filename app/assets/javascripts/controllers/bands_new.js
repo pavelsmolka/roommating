@@ -1,6 +1,6 @@
 App.BandsNewController = Em.ArrayController.extend({
     cancel: function() {
-        this.transitionTo('bands.index');
+        this.transitionTo('bands');
     },
 
     save: function() {
@@ -9,6 +9,6 @@ App.BandsNewController = Em.ArrayController.extend({
 
         this.set('name');
         this.set('description');
-        this.transitionTo('bands.list');
+        this.transitionTo('bands');
     }
 });
