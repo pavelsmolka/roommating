@@ -1,12 +1,12 @@
 <h2>Create new band</h2>
 <form {{action save on="submit"}} class="form-horizontal">
 
-    {{partial "bands/edit_fields"}}
+  {{partial "bands/edit_fields"}}
 
   <div class="form-actions">
-      {{submitButton "Create"}}
+    {{submitButton "Create"}} <!-- this is defined in helpers/forms -->
     <button class="btn" {{action cancel}}>Cancel</button>
-    {{#linkTo "bands.index" class="btn"}}<i class="icon-plus-sign"></i> List{{/linkTo}}
+
 
   </div>
 </form>

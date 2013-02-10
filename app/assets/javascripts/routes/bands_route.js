@@ -4,7 +4,7 @@ App.BandsIndexRoute = Ember.Route.extend({
     },
 
     renderTemplate : function(){
-        this.render('bands/index',{
+        this.render(null, { // render default template, i.e. bands/index
             into:'application'
         });
     }
