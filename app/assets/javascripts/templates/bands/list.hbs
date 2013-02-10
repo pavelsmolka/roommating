@@ -4,18 +4,21 @@
         padding: 15px;
     }
 </style>
-<table>
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Created</th>
-  </tr>
-  </thead>
-  <tbody>
-      {{#each band in controller}}
-          {{view App.ShowBandView contentBinding="band"}}
-      {{/each}}
-  </tbody>
-</table>
+<div style="margin: 30px;">
+    <table style="margin-bottom: 20px;">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Created</th>
+      </tr>
+      </thead>
+      <tbody>
+          {{#each band in controller}}
+              {{view App.ShowBandView contentBinding="band"}}
+          {{/each}}
+      </tbody>
+    </table>
+    {{#linkTo "bands.new" class="btn"}}<i class="icon-plus-sign"></i> New Band{{/linkTo}}
+</div>

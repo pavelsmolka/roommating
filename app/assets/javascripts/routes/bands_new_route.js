@@ -1,16 +1,7 @@
 App.BandsNewRoute = Ember.Route.extend({
-  model: function() {
-    // Because we are maintaining a transaction locally in the controller for editing,
-    // the new record needs to be created in the controller.
-    return null;
-  },
-
-  setupController: function(controller) {
-    controller.startEditing();
-  },
-
-  exit: function() {
-    this._super();
-    this.controllerFor('bands.new').stopEditing();
-  }
+    renderTemplate : function(){
+        this.render('bands_new',{
+            into:'application'
+        });
+    }
 });

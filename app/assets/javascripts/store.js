@@ -6,7 +6,6 @@ App.RESTSerializer = DS.RESTSerializer.extend({
 });
 
 App.Adapter = DS.RESTAdapter.extend({
-  bulkCommit: false,
   serializer: App.RESTSerializer.create()
 });
 
