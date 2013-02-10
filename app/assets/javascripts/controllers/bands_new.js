@@ -1,4 +1,4 @@
-App.BandsNewController = Em.ArrayController.extend({
+App.BandsNewController = Ember.Controller.extend({
     cancel: function() {
         this.transitionTo('bands');
     },
