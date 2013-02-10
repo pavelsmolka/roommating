@@ -45,7 +45,7 @@ class BandsController < ApplicationController
     respond_to do |format|
       if @band.save
         format.html { redirect_to @band, notice: 'Band was successfully created.' }
-        format.json { render json: @band, status: :created, location: @band }
+        format.json { render json: {band: @band}, status: :created, location: @band }
       else
         format.html { render action: "new" }
         format.json { render json: @band.errors, status: :unprocessable_entity }

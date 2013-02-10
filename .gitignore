@@ -1,17 +1,13 @@
-*.gem
-*.rbc
-.bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
+# Default Ruby/Rails ignores
 rdoc
 spec/reports
 test/tmp
 test/version_tmp
 tmp
 log
+
+# Javascript
+
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -22,4 +18,5 @@ log
 _yardoc
 doc/
 
+# IDEA files
 .idea
