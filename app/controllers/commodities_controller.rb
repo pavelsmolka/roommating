@@ -6,7 +6,7 @@ class CommoditiesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @commodities }
+      format.json { render json: {commodities: @commodities} }
     end
   end
 
@@ -17,7 +17,7 @@ class CommoditiesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @commodity }
+      format.json { render json: {commodity: @commodity} }
     end
   end
 
@@ -28,7 +28,7 @@ class CommoditiesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @commodity }
+      format.json { render json: {commodity: @commodity} }
     end
   end
 
@@ -45,10 +45,10 @@ class CommoditiesController < ApplicationController
     respond_to do |format|
       if @commodity.save
         format.html { redirect_to @commodity, notice: 'Commodity was successfully created.' }
-        format.json { render json: @commodity, status: :created, location: @commodity }
+        format.json { render json: {commodity: @commodity}, status: :created, location: @commodity }
       else
         format.html { render action: "new" }
-        format.json { render json: @commodity.errors, status: :unprocessable_entity }
+        format.json { render json: {errors: @commodity.errors}, status: :unprocessable_entity }
       end
     end
   end
