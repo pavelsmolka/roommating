@@ -6,7 +6,7 @@ class StuffsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @stuffs }
+      format.json { render json: {stuffs: @stuffs} }
     end
   end
 
@@ -17,7 +17,7 @@ class StuffsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @stuff }
+      format.json { render json: {stuff: @stuff} }
     end
   end
 
@@ -28,7 +28,7 @@ class StuffsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @stuff }
+      format.json { render json: {stuff: @stuff} }
     end
   end
 
@@ -45,10 +45,10 @@ class StuffsController < ApplicationController
     respond_to do |format|
       if @stuff.save
         format.html { redirect_to @stuff, notice: 'Stuff was successfully created.' }
-        format.json { render json: @stuff, status: :created, location: @stuff }
+        format.json { render json: {stuff: @stuff}, status: :created, location: @stuff }
       else
         format.html { render action: "new" }
-        format.json { render json: @stuff.errors, status: :unprocessable_entity }
+        format.json { render json: {errors: @stuff.errors}, status: :unprocessable_entity }
       end
     end
   end
@@ -64,7 +64,7 @@ class StuffsController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @stuff.errors, status: :unprocessable_entity }
+        format.json { render json: {errors: @stuff.errors}, status: :unprocessable_entity }
       end
     end
   end

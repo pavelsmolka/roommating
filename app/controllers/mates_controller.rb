@@ -6,7 +6,7 @@ class MatesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @mates }
+      format.json { render json: {mates: @mates} }
     end
   end
 
@@ -17,7 +17,7 @@ class MatesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @mate }
+      format.json { render json: {mate: @mate} }
     end
   end
 
@@ -28,7 +28,7 @@ class MatesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @mate }
+      format.json { render json: {mate: @mate} }
     end
   end
 
@@ -45,10 +45,10 @@ class MatesController < ApplicationController
     respond_to do |format|
       if @mate.save
         format.html { redirect_to @mate, notice: 'Mate was successfully created.' }
-        format.json { render json: @mate, status: :created, location: @mate }
+        format.json { render json: {mate: @mate}, status: :created, location: @mate }
       else
         format.html { render action: "new" }
-        format.json { render json: @mate.errors, status: :unprocessable_entity }
+        format.json { render json: {errors: @mate.errors}, status: :unprocessable_entity }
       end
     end
   end
@@ -64,7 +64,7 @@ class MatesController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @mate.errors, status: :unprocessable_entity }
+        format.json { render json: {errors: @mate.errors}, status: :unprocessable_entity }
       end
     end
   end
