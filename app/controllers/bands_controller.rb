@@ -17,7 +17,7 @@ class BandsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @band }
+      format.json { render json: {band: @band} }
     end
   end
 
@@ -61,7 +61,7 @@ class BandsController < ApplicationController
     respond_to do |format|
       if @band.update_attributes(params[:band])
         format.html { redirect_to @band, notice: 'Band was successfully updated.' }
-        format.json { head :no_content }
+        format.json { render json: @contact, status: :ok }
       else
         format.html { render action: "edit" }
         format.json { render json: @band.errors, status: :unprocessable_entity }
