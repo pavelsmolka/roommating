@@ -1,4 +1,15 @@
 Roommating::Application.routes.draw do
+  resources :stuffs
+
+
+  resources :mates
+
+
+  resources :users
+
+
+  get "home/index"
+
   resources :bands
 
 

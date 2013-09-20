@@ -10,5 +10,5 @@
 //= require ember-data
 //= require md5
 //= require jquery_ujs
-//= require_tree ./lib
+
 //= require app

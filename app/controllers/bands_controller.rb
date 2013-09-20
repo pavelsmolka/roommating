@@ -6,7 +6,7 @@ class BandsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @bands }
+      format.json { render json: {bands: @bands} }
     end
   end
 
@@ -28,7 +28,7 @@ class BandsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @band }
+      format.json { render json: {band: @band} }
     end
   end
 
@@ -48,7 +48,7 @@ class BandsController < ApplicationController
         format.json { render json: {band: @band}, status: :created, location: @band }
       else
         format.html { render action: "new" }
-        format.json { render json: @band.errors, status: :unprocessable_entity }
+        format.json { render json: {errors: @band.errors}, status: :unprocessable_entity }
       end
     end
   end
@@ -64,7 +64,7 @@ class BandsController < ApplicationController
         format.json { render json: @contact, status: :ok }
       else
         format.html { render action: "edit" }
-        format.json { render json: @band.errors, status: :unprocessable_entity }
+        format.json { render json: {errors: @band.errors}, status: :unprocessable_entity }
       end
     end
   end
