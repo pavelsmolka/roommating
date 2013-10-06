@@ -5,6 +5,7 @@ Installation
 ------------
 ```
 $ git clone git@github.com:pavelsmolka/roommating.git
+$ cd roommating
 $ vagrant up
 ```
 
