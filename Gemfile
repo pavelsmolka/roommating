@@ -20,9 +20,13 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+# Javascript runtime
+gem 'therubyracer'
+
 # barber included because of https://github.com/emberjs/ember.js/issues/1827#issuecomment-12610866
-gem 'barber', git: 'git://github.com/tchak/barber.git'
-gem 'ember-rails', github: 'emberjs/ember-rails'
+# gem 'barber', git: 'git://github.com/tchak/barber.git'
+gem 'ember-rails'#, github: 'emberjs/ember-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
